@@ -3,7 +3,7 @@ MAINTAINER Benoît HAGENBOURGER "benoit@hagenbourger.fr"
 
 ENV ANDROID_COMPILE_SDK "26"
 ENV ANDROID_BUILD_TOOLS "26.0.2"
-ENV ANDROID_SDK_TOOLS_REV "4333796"
+ENV ANDROID_SDK_TOOLS_REV "3859397"
 
 RUN wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS_REV}.zip && \
     mkdir /opt/android-sdk-linux && \
@@ -27,5 +27,4 @@ RUN echo y | $ANDROID_HOME/tools/bin/sdkmanager --update && \
     echo y | $ANDROID_HOME/tools/bin/sdkmanager 'extras;google;m2repository' && \
     mkdir -p "$ANDROID_HOME/licenses" && \
     echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license" && \
-    echo -e "\nd56f5187479451eabf01fb78af6dfcb131a6481e" >> "$ANDROID_HOME/licenses/android-sdk-license" && \
     echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
