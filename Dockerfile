@@ -1,9 +1,9 @@
 FROM openjdk:8-jdk
 MAINTAINER Benoît HAGENBOURGER "benoit@hagenbourger.fr"
 
-ENV ANDROID_COMPILE_SDK "27"
-ENV ANDROID_BUILD_TOOLS "27.0.3"
-ENV ANDROID_SDK_TOOLS_REV "3859397"
+ENV ANDROID_COMPILE_SDK "28"
+ENV ANDROID_BUILD_TOOLS "28.0.3"
+ENV ANDROID_SDK_TOOLS_REV "4333796"
 
 RUN wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS_REV}.zip && \
     mkdir /opt/android-sdk-linux && \
